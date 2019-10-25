@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--5.0及其以上可以设置状态栏颜色-->
+        <!--白色-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+
+        <!--沉浸式-->
+        <!--状态栏透明 4.0-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--底部导航栏透明 4.0-->
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+</resources>
