@@ -1,6 +1,6 @@
 ## NeImmersive  Android沉浸式和CardView用法
 ### 1. 沉浸式
-* 在style.xml文件中设置
+#### 1.1 在style.xml文件中设置
 ```android
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
          <!--5.0及其以上可以设置状态栏颜色-->
@@ -14,7 +14,15 @@
          <item name="android:windowTranslucentNavigation">true</item>
     </style>
 ```
-* 在Java代码中设置
+#### 1.2 在Java代码中设置
+* Android 4.0:  
+```android
+        //状态栏透明 4.0
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //底部导航栏透明 4.0
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+```
+* Android 5.0及以上: 
 ```android
     private void immersive() {
         //4.0 以下不支持沉浸式
@@ -58,7 +66,11 @@
                 view.getPaddingRight(), view.getPaddingBottom());
     }
 ```
+#### 1.3 示例效果图  
+![image](https://github.com/tianyalu/NeImmersive/blob/master/show/immersive.png)  
+
 ### 2. CardView
+#### 2.1 代码
 ```xml
     <!--app:cardBackgroundColor="@color/colorPrimary"--> <!-- 设置CardView背景色-->
     <!--app:cardPreventCornerOverlap="false"--> <!-- 取消Lollipop 5.0以下版本的padding-->
@@ -95,6 +107,6 @@
             android:gravity="center"/>
     </android.support.v7.widget.CardView>
 ```
-### 3. 示例
+#### 2.2 示例效果图
 ![image](https://github.com/tianyalu/NeImmersive/blob/master/show/show.png)  
 
