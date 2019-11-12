@@ -17,13 +17,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //状态栏透明 4.0
+        //状态栏透明 4.0及以上
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        //底部导航栏透明 4.0
+        //底部导航栏透明 4.0及以上
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 
-        immersive();
-        setHeightAndPadding(this, findViewById(R.id.toolbar));
+//        immersive();
+//        setHeightAndPadding(this, findViewById(R.id.toolbar));
     }
 
     private void immersive() {
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        //5.0及其以上
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             visibility |= View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
 
             window.getDecorView().setSystemUiVisibility(visibility);
-        }else {
+        }else { //4.0
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
     }

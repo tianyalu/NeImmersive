@@ -12,10 +12,10 @@
         <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
 
         <!--沉浸式-->
-        <!--状态栏透明 4.0-->
-        <item name="android:windowTranslucentStatus">true</item>
-        <!--底部导航栏透明 4.0-->
-        <item name="android:windowTranslucentNavigation">true</item>
+        <!--状态栏透明 4.0及以上-->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <!--底部导航栏透明 4.0及以上-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
     </style>
 
 </resources>
